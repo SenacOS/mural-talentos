@@ -1,0 +1,29 @@
+name: Indexar Perfil de Candidato
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  indexar:
+    if: contains(github.event.issue.labels.*.name, 'perfil')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Gerar token do GitHub App
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SENACOS_APP_ID }}
+          private-key: ${{ secrets.SENACOS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Indexar perfil e atribuir time
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script-path: .github/scripts/indexar-perfil.js
