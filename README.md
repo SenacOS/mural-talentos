@@ -11,7 +11,7 @@ Este é o repositório de **perfis de candidatos** da organização SenacOS — 
 |---|---|
 | [Criar perfil](../../issues/new/choose) | Formulário estruturado (Issue Form) para declarar seus dados, curso e stacks |
 | Issues `Perfis - <Stack>` | Listas automáticas de candidatos por tecnologia — ponto de partida da busca de recrutadores |
-| [`GUIA-DE-CONTRIBUICAO.md`](https://github.com/SenacOS/core/blob/main/GUIA-DE-CONTRIBUICAO.md) | Regras de membresia, Times por curso e demais convenções da organização |
+| [`GUIA-DE-CONTRIBUICAO.md`](https://github.com/SenacOS/core/blob/main/GUIA_DE_CONTRIBUICAO.md) | Regras de membresia, Times por curso e demais convenções da organização |
 | Categoria [Dúvidas](https://github.com/orgs/SenacOS/discussions/categories/duvidas) | Onde tirar dúvidas sobre preenchimento — Discussions estão desabilitadas neste repositório |
 
 ## 👤 Para candidatos — como criar seu perfil
