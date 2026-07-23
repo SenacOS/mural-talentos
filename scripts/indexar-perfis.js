@@ -67,7 +67,6 @@ module.exports = async ({ github, context, core }) => {
     }
   }
 
-  // --- 2. Convidar para o Team correspondente ao curso ---
   const teamSlug = CURSO_PARA_TEAM_SLUG[curso];
   if (!teamSlug) {
     core.warning(`Curso "${curso}" não mapeado para nenhum Team. Pulando convite.`);
@@ -79,7 +78,6 @@ module.exports = async ({ github, context, core }) => {
   }
 
   try {
-    // Idempotente: se o usuário já for membro, apenas reafirma a membership.
     await github.rest.teams.addOrUpdateMembershipForUserInOrg({
       org: owner,
       team_slug: teamSlug,
@@ -138,8 +136,7 @@ async function buscarOuCriarAgregadora({ github, owner, repo, titulo }) {
   const busca = await github.rest.search.issuesAndPullRequests({
     q: `repo:${owner}/${repo} in:title "${titulo}" type:issue`,
   });
-  // A Search API faz correspondência textual, não exata — filtramos pelo
-  // título idêntico para evitar pegar "Perfis - Java" ao buscar "Perfis - JavaScript".
+  
   const existente = busca.data.items.find((i) => i.title === titulo);
   if (existente) return existente;
 
