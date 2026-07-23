@@ -1,0 +1,132 @@
+name: "Perfil de Candidato"
+description: "Crie seu perfil para ser encontrado por recrutadores. Preencha com atenção — este formulário alimenta buscas automáticas por stack e sua entrada nos Teams da organização."
+title: "[Perfil] "
+labels: ["perfil"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bem-vindo(a) à vitrine de talentos da SenacOS!
+
+        Este formulário cria o seu perfil público de candidato. Recrutadores vão navegar
+        e buscar candidatos a partir das informações abaixo — capriche, mas **nunca
+        preencha dados sensíveis aqui** (CPF, endereço completo, telefone pessoal). Use
+        apenas os campos de contato profissional indicados (GitHub, LinkedIn).
+
+  - type: input
+    id: nome-completo
+    attributes:
+      label: Nome completo
+      description: Como você quer ser identificado(a) pelos recrutadores.
+      placeholder: "Ex.: Maria Oliveira"
+    validations:
+      required: true
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: Link do LinkedIn
+      description: Opcional, mas recomendado.
+      placeholder: "https://linkedin.com/in/..."
+    validations:
+      required: false
+
+  - type: input
+    id: portfolio
+    attributes:
+      label: Portfólio / site pessoal
+      description: Opcional. Link para portfólio, site pessoal ou outro repositório de destaque.
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: curso
+    attributes:
+      label: Curso
+      description: Selecione o curso em que você está matriculado(a). Essa escolha também define o Team da organização ao qual você será automaticamente convidado(a).
+      options:
+        - Análise e Desenvolvimento de Sistemas
+        - Ciências da Computação
+        - Engenharia de Software
+        - Sistemas de Informação
+        - Banco de Dados
+        - Redes de Computadores
+        - Gestão da Tecnologia da Informação
+        - Sistemas para Internet
+        - Engenharia da Computação
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stacks
+    attributes:
+      label: Stacks / Tecnologias
+      description: Selecione todas as tecnologias com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora "Perfis - <Stack>", visível a recrutadores.
+      multiple: true
+      options:
+        - Java
+        - JavaScript
+        - TypeScript
+        - Python
+        - C#
+        - Go
+        - PHP
+        - React
+        - Angular
+        - Vue
+        - Node.js
+        - Spring Boot
+        - .NET
+        - Django
+        - Flask
+        - PostgreSQL
+        - MySQL
+        - MongoDB
+        - Docker
+        - AWS
+    validations:
+      required: true
+
+  - type: dropdown
+    id: disponibilidade
+    attributes:
+      label: Disponibilidade
+      description: Tipo de vínculo que você está buscando no momento.
+      multiple: true
+      options:
+        - Estágio
+        - CLT
+        - Freelance
+        - PJ
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modalidade
+    attributes:
+      label: Modalidade de trabalho
+      multiple: true
+      options:
+        - Remoto
+        - Híbrido
+        - Presencial
+    validations:
+      required: true
+
+  - type: textarea
+    id: sobre-voce
+    attributes:
+      label: Sobre você
+      description: Um resumo curto sobre sua trajetória, interesses ou projetos que você quer destacar.
+      placeholder: "Conte um pouco sobre sua experiência, projetos e objetivos profissionais..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Confirmação de privacidade
+      options:
+        - label: Confirmo que não incluí CPF, endereço completo, telefone pessoal ou qualquer outro dado sensível neste formulário.
+          required: true

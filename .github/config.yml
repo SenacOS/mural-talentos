@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Dúvidas sobre como preencher o perfil
+    url: https://github.com/orgs/SenacOS/discussions/categories/duvidas
+    about: Use a categoria Dúvidas do repositório comunidade antes de abrir uma issue aqui.
+  - name: Estou procurando uma vaga, não divulgando meu perfil
+    url: https://github.com/SenacOS/mural-vagas/issues
+    about: Vagas ficam no repositório mural-vagas, não aqui em vitrine-talentos.
