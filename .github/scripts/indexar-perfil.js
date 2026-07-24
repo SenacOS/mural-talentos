@@ -48,7 +48,7 @@ module.exports = async ({ github, context, core }) => {
   const body = issue.body || "";
 
   const nomeCompleto = extrairCampo(body, "Nome completo");
-  const usuarioGithub = extrairCampo(body, "Usuário do GitHub").replace(/^@/, "");
+  const usuarioGithub = issue.user.login;
   const linkedin = extrairCampo(body, "Link do LinkedIn");
   const curso = extrairCampo(body, "Curso");
   const stacksTexto = extrairCampo(body, "Stacks / Tecnologias");
