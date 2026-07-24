@@ -4,21 +4,13 @@ const STACKS_CONHECIDAS = [
   "TypeScript",
   "Python",
   "C#",
+  "C",
+  "C++",
   "Go",
   "PHP",
-  "React",
-  "Angular",
-  "Vue",
-  "Node.js",
-  "Spring Boot",
-  ".NET",
-  "Django",
-  "Flask",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "Docker",
-  "AWS",
+  "Ruby",
+  "Kotlin",
+  "Swift",
 ];
 
 const CURSO_PARA_TEAM_SLUG = {
@@ -51,7 +43,7 @@ module.exports = async ({ github, context, core }) => {
   const usuarioGithub = issue.user.login;
   const linkedin = extrairCampo(body, "Link do LinkedIn");
   const curso = extrairCampo(body, "Curso");
-  const stacksTexto = extrairCampo(body, "Stacks / Tecnologias");
+  const stacksTexto = extrairCampo(body, "Linguagens de Programação");
   const stacksMarcadas = stacksTexto
     ? stacksTexto.split(",").map((s) => s.trim()).filter(Boolean)
     : [];

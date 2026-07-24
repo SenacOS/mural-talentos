@@ -47,7 +47,7 @@ body:
       description: Selecione o curso em que você está matriculado(a). Essa escolha também define o Team da organização ao qual você será automaticamente convidado(a).
       options:
         - Análise e Desenvolvimento de Sistemas
-        - Ciências da Computação
+        - Ciência da Computação
         - Engenharia de Software
         - Sistemas de Informação
         - Banco de Dados
@@ -59,10 +59,10 @@ body:
       required: true
 
   - type: dropdown
-    id: stacks
+    id: linguagens
     attributes:
-      label: Stacks / Tecnologias
-      description: Selecione todas as tecnologias com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora "Perfis - <Stack>", visível a recrutadores.
+      label: Linguagens de Programação
+      description: Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora "Perfis - <Linguagem>", visível a recrutadores.
       multiple: true
       options:
         - Java
@@ -70,21 +70,13 @@ body:
         - TypeScript
         - Python
         - C#
+        - C
+        - C++
         - Go
         - PHP
-        - React
-        - Angular
-        - Vue
-        - Node.js
-        - Spring Boot
-        - .NET
-        - Django
-        - Flask
-        - PostgreSQL
-        - MySQL
-        - MongoDB
-        - Docker
-        - AWS
+        - Ruby
+        - Kotlin
+        - Swift
     validations:
       required: true
 
