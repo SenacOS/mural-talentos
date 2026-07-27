@@ -1,6 +1,6 @@
 name: "Perfil de Candidato"
 description: "Crie seu perfil para ser encontrado por recrutadores. Preencha com atenção — este formulário alimenta buscas automáticas por stack e sua entrada nos Teams da organização."
-title: "[Perfil] "
+title: "[Área] Nome do Candidato"
 labels: ["perfil"]
 body:
   - type: markdown
@@ -12,6 +12,11 @@ body:
         e buscar candidatos a partir das informações abaixo — capriche, mas **nunca
         preencha dados sensíveis aqui** (CPF, endereço completo, telefone pessoal). Use
         apenas os campos de contato profissional indicados (GitHub, LinkedIn).
+
+        > **Antes de enviar, edite o título da issue** (campo no topo desta página)
+        > substituindo `[Área]` pela sua área de atuação (ex.: `[Front-end]`,
+        > `[Back-end]`, `[Full Stack]`, `[Mobile]`, `[Dados]`) e `Nome do Candidato`
+        > pelo seu nome. Exemplo final: `[Back-end] Maria Oliveira`.
 
   - type: input
     id: nome-completo
@@ -62,7 +67,7 @@ body:
     id: linguagens
     attributes:
       label: Linguagens de Programação
-      description: Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora "Perfis - <Linguagem>", visível a recrutadores.
+      description: (Múltipla escolha) Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora visível a recrutadores.
       multiple: true
       options:
         - Java
@@ -84,7 +89,7 @@ body:
     id: disponibilidade
     attributes:
       label: Disponibilidade
-      description: Tipo de vínculo que você está buscando no momento.
+      description: (Múltipla escolha) Tipo de vínculo que você está buscando no momento.
       multiple: true
       options:
         - Estágio
