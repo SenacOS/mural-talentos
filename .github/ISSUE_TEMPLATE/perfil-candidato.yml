@@ -67,7 +67,7 @@ body:
     id: linguagens
     attributes:
       label: Linguagens de Programação
-      description: (Múltipla escolha) Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora visível a recrutadores.
+      description: Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora visível a recrutadores.
       multiple: true
       options:
         - Java
@@ -89,7 +89,7 @@ body:
     id: disponibilidade
     attributes:
       label: Disponibilidade
-      description: (Múltipla escolha) Tipo de vínculo que você está buscando no momento.
+      description: Tipo de vínculo que você está buscando no momento.
       multiple: true
       options:
         - Estágio
