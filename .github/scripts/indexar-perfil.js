@@ -90,7 +90,7 @@ module.exports = async ({ github, context, core }) => {
   for (const stack of STACKS_CONHECIDAS) {
     const estaMarcada = stacksMarcadas.includes(stack);
     try {
-      await sincronizarStack({ github, owner, repo, issue, stack, estaMarcada, nomeCompleto, usuarioGithub, linkedin, core });
+      await sincronizarStack({ github, owner, repo, issue, stack, estaMarcada, nomeCompleto, usuarioGithub, linkedin, contratacaoMarcada, modalidadeMarcada, core });
     } catch (erro) {
       core.warning(`Falha ao sincronizar stack "${stack}" para a issue #${issue.number}: ${erro.message}`);
     }
@@ -149,7 +149,7 @@ module.exports = async ({ github, context, core }) => {
   }
 };
 
-async function sincronizarStack({ github, owner, repo, issue, stack, estaMarcada, nomeCompleto, usuarioGithub, linkedin, core }) {
+async function sincronizarStack({ github, owner, repo, issue, stack, estaMarcada, nomeCompleto, usuarioGithub, linkedin, contratacaoMarcada, modalidadeMarcada, core }) {
   const marcador = `<!-- perfil:#${issue.number} -->`;
   const tituloAgregadora = `Perfis - ${stack}`;
 
@@ -176,6 +176,8 @@ async function sincronizarStack({ github, owner, repo, issue, stack, estaMarcada
     `**GitHub:** ${usuarioGithub ? `@${usuarioGithub}` : "(não informado)"}`,
   ];
   if (linkedin) linhas.push(`**LinkedIn:** ${linkedin}`);
+  if (contratacaoMarcada.length) linhas.push(`**Regime:** ${contratacaoMarcada.join(", ")}`);
+  if (modalidadeMarcada.length) linhas.push(`**Modalidade:** ${modalidadeMarcada.join(", ")}`);
   linhas.push(`**Perfil:** #${issue.number}`);
   linhas.push("", marcador);
   const corpoComentario = linhas.join("\n");
