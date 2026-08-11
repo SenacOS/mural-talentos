@@ -93,7 +93,7 @@ body:
     id: disponibilidade
     attributes:
       label: Contratação
-      description: Tipo(s) de vínculo que você está buscando no momento. Cada opção marcada aqui também vira um label na issue, facilitando buscas combinadas (ex.: Java + PJ).
+      description: "Tipo(s) de vínculo que você está buscando no momento. Cada opção marcada aqui também vira um label na issue, facilitando buscas combinadas (ex.: Java + PJ)."
       multiple: true
       options:
         - Estágio
