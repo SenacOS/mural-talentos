@@ -57,7 +57,7 @@ body:
   - type: dropdown
     id: linguagens
     attributes:
-      label: Especialidades
+      label: Linguagens de Programação
       description: Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora visível a recrutadores.
       multiple: true
       options:
