@@ -27,21 +27,12 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: linkedin
+  - type: textarea
+    id: sobre-voce
     attributes:
-      label: Link do LinkedIn
-      description: Opcional, mas recomendado.
-      placeholder: "https://linkedin.com/in/..."
-    validations:
-      required: false
-
-  - type: input
-    id: portfolio
-    attributes:
-      label: Portfólio / site pessoal
-      description: Opcional. Link para portfólio, site pessoal ou outro repositório de destaque.
-      placeholder: "https://..."
+      label: Apresentação
+      description: Um resumo curto sobre sua trajetória, interesses ou projetos que você quer destacar.
+      placeholder: "Conte um pouco sobre sua experiência, projetos e objetivos profissionais..."
     validations:
       required: false
 
@@ -66,7 +57,7 @@ body:
   - type: dropdown
     id: linguagens
     attributes:
-      label: Linguagens de Programação
+      label: Especialidades
       description: Selecione todas as linguagens com as quais você tem experiência. Cada uma marcada aqui te adiciona à respectiva issue agregadora visível a recrutadores.
       multiple: true
       options:
@@ -86,10 +77,23 @@ body:
       required: true
 
   - type: dropdown
+    id: modalidade
+    attributes:
+      label: Alocação
+      description: Modalidade(s) de trabalho que você aceita.
+      multiple: true
+      options:
+        - Remoto
+        - Híbrido
+        - Presencial
+    validations:
+      required: true
+
+  - type: dropdown
     id: disponibilidade
     attributes:
-      label: Disponibilidade
-      description: Tipo de vínculo que você está buscando no momento.
+      label: Contratação
+      description: Tipo(s) de vínculo que você está buscando no momento. Cada opção marcada aqui também vira um label na issue, facilitando buscas combinadas (ex.: Java + PJ).
       multiple: true
       options:
         - Estágio
@@ -99,24 +103,21 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: modalidade
+  - type: input
+    id: linkedin
     attributes:
-      label: Modalidade de trabalho
-      multiple: true
-      options:
-        - Remoto
-        - Híbrido
-        - Presencial
+      label: LinkedIn
+      description: Opcional, mas recomendado.
+      placeholder: "https://linkedin.com/in/..."
     validations:
-      required: true
+      required: false
 
-  - type: textarea
-    id: sobre-voce
+  - type: input
+    id: portfolio
     attributes:
-      label: Sobre você
-      description: Um resumo curto sobre sua trajetória, interesses ou projetos que você quer destacar.
-      placeholder: "Conte um pouco sobre sua experiência, projetos e objetivos profissionais..."
+      label: Portfólio / site pessoal
+      description: Opcional. Link para portfólio, site pessoal ou outro repositório de destaque.
+      placeholder: "https://..."
     validations:
       required: false
 
